@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="edu.uoc.mperezma.maps">
+    <application android:icon="@drawable/geolocator" android:label="@string/skeleton_app">
+        <activity android:name=".GugolMap" android:label="Photo Geolocator" android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="edu.uoc.mperezma.MainActivity" android:label="main"/>
+        <activity android:name="edu.uoc.mperezma.location.LocationActivity" android:label="location"/>
+        <activity android:name="edu.uoc.mperezma.camera.ImageCapture" android:label="imageCapture"/>
+        <activity android:name="edu.uoc.mperezma.gallery.ImageGallery" android:label="gallery"/>
+        <activity android:name="edu.uoc.mperezma.FileDialog" android:label="fileDialog"/>
+        <activity android:name="edu.uoc.mperezma.Version" android:label="version"/>
+        <activity android:name="edu.uoc.mperezma.Config" android:label="config"/>
+        <uses-library android:name="com.google.android.maps" />
+    </application>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+</manifest>
