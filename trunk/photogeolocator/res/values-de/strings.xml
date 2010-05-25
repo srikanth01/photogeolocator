@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This file contains resource definitions for displayed strings, allowing
+     them to be changed based on the locale and options. -->
+
+<resources>
+    <!-- Simple strings. -->
+    <string name="skeleton_app">Photo Geolocator</string>
+    <string name="update">Aktualisieren</string>
+    <string name="back">Schließen</string>
+    <string name="device">Gerät</string>
+    <string name="unavailable">nicht verfügbar</string>
+    <string name="longitude">Längengrad</string>
+    <string name="latitude">Breitengrad</string>
+    <string name="altitude">Höhe</string>
+    <string name="speed">Geschwindigkeit</string>
+    <string name="bearing">Richtung</string>
+    <string name="accuracy">Präzision</string>
+    <string name="meters">Meter</string>
+    <string name="eastDegrees">Grad</string>
+
+    <string name="fileSelection">Datei Auswahl:</string>
+    <string name="gallery">Galerie</string>
+    <string name="explorer">Browser</string>
+    <string name="flashMode">Benutzung des Blitzes:</string>
+    <string name="never">niemals</string>
+    <string name="allways">immer</string>
+    <string name="auto">Auto</string>
+
+    <string name="viewThumbs">Miniaturansicht</string>
+
+    <string name="version">Version</string>
+    <string name="betaTestTeam">Beta-test team:</string>
+    <string name="thisAppUsesLibrary">Diese anwendung hat zugriff auf die Bibliothek </string>
+
+    <string name="gpsUnavailable">GPS nicht verfügbar</string>
+    <string name="noGpsInfo">Das Bild enthält keinerlei geografisch information</string>
+    <string name="retrievingAddress">Bitte warten auf ...</string>
+    <string name="confirmOverwrite">Wollen Sie die Datei ersetzen?</string>
+    <string name="willOverwrite">Das ausgewählte Bild wird durch ausgewählte geografisch information ersetzt</string>
+    <string name="accept">OK</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="noDigitalCameraImage">Das Bild wurde nicht mit einer digitalen Kamera aufgenommen.</string>
+    <string name="showImageLocation">Geografisch Lage eines Fotos anzeigen</string>
+    <string name="setImageLocation">Geografisch Lage eines Fotos bestimmen</string>
+    <string name="takePicture">Fotografieren</string>
+    <string name="preferences">Preferences</string>
+    <string name="about">Info...</string>
+
+    <string name="syncLocation">Geografisch Lage des GPS benutzen</string>
+</resources>
+
