@@ -31,7 +31,11 @@ public class GeocodeLookup extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        textView.setText(R.string.retrievingAddress);
+        CharSequence text = textView.getText();
+        String suffix = " - " + gugolMap.getText(R.string.retrievingAddress).toString();
+        if (!text.toString().endsWith(suffix)) {
+            textView.setText(textView.getText() + suffix );
+        }
     }
 
     @Override
