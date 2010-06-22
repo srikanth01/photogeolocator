@@ -18,9 +18,9 @@ import org.apache.sanselan.Sanselan;
 import org.apache.sanselan.common.IImageMetadata;
 import org.apache.sanselan.common.RationalNumber;
 import org.apache.sanselan.common.RationalNumberUtilities;
-import org.apache.sanselan.formats.jpeg.JpegImageMetadata;
 import org.apache.sanselan.formats.jpeg.exifRewrite.ExifRewriter;
 import org.apache.sanselan.formats.tiff.TiffImageMetadata;
+import org.apache.sanselan.formats.tiff.TiffImageMetadata.GPSInfo;
 import org.apache.sanselan.formats.tiff.constants.TagInfo;
 import org.apache.sanselan.formats.tiff.constants.TiffConstants;
 import org.apache.sanselan.formats.tiff.constants.TiffFieldTypeConstants;
@@ -39,18 +39,18 @@ public class GPSFileWriter {
         try {
             TiffOutputSet outputSet = new TiffOutputSet();
             IImageMetadata metadata = Sanselan.getMetadata(gpxfile);
-            JpegImageMetadata jpegMetadata = null;
+            TiffImageMetadata jpegMetadata = null;
             if (metadata != null) {
-                jpegMetadata = (JpegImageMetadata) metadata;
+                jpegMetadata = (TiffImageMetadata) metadata;
             }
-            TiffImageMetadata exif = null;
+            GPSInfo exif = null;
             if (jpegMetadata != null) {
-                exif = jpegMetadata.getExif();
+                exif = jpegMetadata.getGPS();
             }
             if (exif == null) {
                 return false;
             }
-            outputSet = exif.getOutputSet();
+            outputSet = jpegMetadata.getOutputSet();
             if (outputSet != null) {
                 TiffOutputDirectory exifDirectory = outputSet.getOrCreateRootDirectory();
                 TagInfo softwareTag = TiffConstants.EXIF_TAG_SOFTWARE;

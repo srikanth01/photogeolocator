@@ -106,8 +106,7 @@ public class GugolMap extends MapActivity implements LocationHelperListener, and
     private void showPictureLocation(final String fileName) {
         try {
             IImageMetadata metadata = Sanselan.getMetadata(new File(fileName));
-            JpegImageMetadata jpegMetadata = (JpegImageMetadata) metadata;
-            TiffImageMetadata exif = jpegMetadata.getExif();
+            TiffImageMetadata exif = (TiffImageMetadata) metadata;
             RationalNumber[] rationalLongitude = (RationalNumber[]) exif.findField(TiffConstants.GPS_TAG_GPS_LONGITUDE).getValue();
             String longitudeRef = exif.findField(TiffConstants.GPS_TAG_GPS_LONGITUDE_REF).getStringValue();
             RationalNumber[] rationalLatitude = (RationalNumber[]) exif.findField(TiffConstants.GPS_TAG_GPS_LATITUDE).getValue();
