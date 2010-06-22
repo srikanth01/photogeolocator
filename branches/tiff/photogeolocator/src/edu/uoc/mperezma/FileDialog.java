@@ -187,7 +187,10 @@ public class FileDialog extends ListActivity {
      */
     public List<String> getAcceptedFileTypes() {
         List<String> types = new ArrayList<String>();
-        types.add("jpg");
+        types.add("tif");
+        types.add("TIF");
+        types.add("tiff");
+        types.add("TIFF");
         return types;
     }
 
