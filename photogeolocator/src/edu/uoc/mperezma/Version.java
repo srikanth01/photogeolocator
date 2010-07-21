@@ -29,18 +29,22 @@ public class Version extends Activity {
         mEditor.setText("" +
                 "Photo Geolocator" +
                 "\n" +
-                getText(R.string.version) + " 1.0 Beta (Build 201005172249)" +
+                getText(R.string.version) + " 1.0 (Build 201007220003)" +
                 "\n" +
+                "Free GNU license" +
                 "\n" +
-                "Mario Pérez Madueño - mario@oiram.com" +
+                "http://www.photogeolocator.org" +
+                "\n" +
+                "Mail: info@photogeolocator.org" +
                 "\n" +
                 "\n" +
                 getText(R.string.betaTestTeam) +
                 "\n" +
-                "\n" +
                 "Montxo - HTC Dream" +
                 "\n" +
                 "Pablo Carmona - HTC Magic" +
+                "\n" +
+                "Maria del Mar Fontana - Motorola Dext" +
                 "\n" +
                 "Javier Gallego - HTC Hero" +
                 "\n" +
@@ -53,6 +57,8 @@ public class Version extends Activity {
                 "David Godino - HTC Legend" +
                 "\n" +
                 "Enric Heredia - HTC Tatoo" +
+                "\n" +
+                "Jose Antonio López - HTC Dream" +
                 "\n" +
                 "Ángel Martínez - HTC Hero" +
                 "\n" +
