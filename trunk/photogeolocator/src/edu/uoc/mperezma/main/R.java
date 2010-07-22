@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package edu.uoc.mperezma.maps;
+package edu.uoc.mperezma.main;
 
 public final class R {
     public static final class attr {
@@ -83,6 +83,7 @@ public final class R {
         public static final int setImageLocation=0x7f060021;
         public static final int showImageLocation=0x7f060020;
         /**  Simple strings. 
+ Simple strings. 
  Simple strings. 
  Simple strings. 
          */

@@ -9,7 +9,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
 import android.widget.EditText;
-import edu.uoc.mperezma.maps.R;
+import edu.uoc.mperezma.main.R;
 
 /**
  *

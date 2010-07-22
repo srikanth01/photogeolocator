@@ -19,7 +19,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-import edu.uoc.mperezma.maps.R;
+import edu.uoc.mperezma.main.R;
 import java.util.HashMap;
 import java.util.List;
 

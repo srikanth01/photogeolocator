@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import edu.uoc.mperezma.maps.R;
+import edu.uoc.mperezma.main.R;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;

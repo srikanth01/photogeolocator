@@ -14,7 +14,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-import edu.uoc.mperezma.maps.R;
+import edu.uoc.mperezma.main.R;
 
 /**
  *
@@ -48,7 +48,7 @@ public class MainActivity extends ListActivity implements OnItemClickListener {
             startActivity(intent);
         }
         if (arg2 == 2) {
-            Intent intent = new Intent(this, edu.uoc.mperezma.maps.GugolMap.class);
+            Intent intent = new Intent(this, edu.uoc.mperezma.main.GugolMap.class);
             startActivity(intent);
         }
         if (arg2 == 3) {

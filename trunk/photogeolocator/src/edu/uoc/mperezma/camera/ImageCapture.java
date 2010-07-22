@@ -24,7 +24,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import edu.uoc.mperezma.location.LocationHelper;
 import edu.uoc.mperezma.location.LocationHelperListener;
-import edu.uoc.mperezma.maps.R;
+import edu.uoc.mperezma.main.R;
 
 /**
  *

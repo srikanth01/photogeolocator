@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package edu.uoc.mperezma.maps;
+package edu.uoc.mperezma.main;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
