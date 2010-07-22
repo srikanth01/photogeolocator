@@ -41,6 +41,7 @@ public class ImageCapture extends Activity implements SurfaceHolder.Callback, Ca
     private LocationHelper locationHelper;
     private MediaPlayer autofocusPlayer;
     private MediaPlayer shotPlayer;
+    protected boolean takingPicture = false;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -101,7 +102,8 @@ public class ImageCapture extends Activity implements SurfaceHolder.Callback, Ca
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
+        if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER && !takingPicture) {
+            takingPicture = true;
             autofocusBeep();
             try {
                 final Parameters parameters = camera.getParameters();

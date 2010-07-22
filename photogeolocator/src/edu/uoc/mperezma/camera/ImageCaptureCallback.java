@@ -60,6 +60,7 @@ public class ImageCaptureCallback implements PictureCallback {
 
         imageCapture.sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://" + Environment.getExternalStorageDirectory())));
         imageCapture.startPreview();
+        imageCapture.takingPicture = false;
     }
 
 }
