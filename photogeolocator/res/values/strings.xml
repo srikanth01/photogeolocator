@@ -47,6 +47,9 @@
     <string name="betaTestTeam">Beta-test team:</string>
     <string name="thisAppUsesLibrary">This applicaton make use of the library</string>
 
+    <string name="takingPicture">Taking picture, please wait...</string>
+    <string name="pictureTaken">Picture has been geotagged</string>
+
     <string name="gpsUnavailable">GPS not available</string>
     <string name="noGpsInfo">Picture doesn\'t contain geographic information</string>
     <string name="retrievingAddress">Retrieving address...</string>

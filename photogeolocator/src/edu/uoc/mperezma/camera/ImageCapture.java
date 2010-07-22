@@ -22,6 +22,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 import edu.uoc.mperezma.location.LocationHelper;
 import edu.uoc.mperezma.location.LocationHelperListener;
 import edu.uoc.mperezma.main.R;
@@ -91,6 +92,7 @@ public class ImageCapture extends Activity implements SurfaceHolder.Callback, Ca
 
     Camera.PictureCallback mPictureCallbackRaw = new Camera.PictureCallback() {
         public void onPictureTaken(byte[] data, Camera c) {
+            Toast.makeText(ImageCapture.this, R.string.pictureTaken, Toast.LENGTH_SHORT).show();
             shotBeep();
         }
     };
@@ -104,6 +106,7 @@ public class ImageCapture extends Activity implements SurfaceHolder.Callback, Ca
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER && !takingPicture) {
             takingPicture = true;
+            Toast.makeText(ImageCapture.this, R.string.takingPicture, Toast.LENGTH_SHORT).show();
             autofocusBeep();
             try {
                 final Parameters parameters = camera.getParameters();
