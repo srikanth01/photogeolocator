@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.RadioButton;
-import edu.uoc.mperezma.maps.R;
+import edu.uoc.mperezma.main.R;
 
 /**
  *

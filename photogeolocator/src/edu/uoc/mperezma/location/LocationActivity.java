@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import edu.uoc.mperezma.maps.R;
+import edu.uoc.mperezma.main.R;
 
 /**
  *
