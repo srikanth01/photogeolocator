@@ -47,6 +47,9 @@
     <string name="betaTestTeam">Equipo Beta-test:</string>
     <string name="thisAppUsesLibrary">Esta aplicación utiliza la librería </string>
 
+    <string name="takingPicture">Tomando foto, espere...</string>
+    <string name="pictureTaken">Se ha geoetiquetado la foto</string>
+
     <string name="gpsUnavailable">GPS no disponible</string>
     <string name="noGpsInfo">La imagen no contiene información geográfica</string>
     <string name="retrievingAddress">Obteniendo dirección...</string>
