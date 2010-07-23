@@ -64,7 +64,7 @@ public class Version extends Activity {
                 "\n" +
                 "Juan Manuel Patón - HTC Hero" +
                 "\n" +
-                "Marco Antonio Pérez - HTC Magic" +
+                "Marco Antonio Pérez - HTC Magic / Nexus One" +
                 "\n" +
                 "Moisés Regalon - HTC Magic" +
                 "\n" +
