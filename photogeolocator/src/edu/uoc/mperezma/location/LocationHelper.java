@@ -9,6 +9,8 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -18,6 +20,7 @@ public class LocationHelper implements LocationListener {
 
     private LocationHelperListener listener;
     private final LocationManager locationManager;
+    private final List<String> providers = new ArrayList<String>();
     private double longitude;
     private double latitude;
     private boolean hasData;
@@ -50,7 +53,10 @@ public class LocationHelper implements LocationListener {
         if (location != null) {
             longitude = location.getLongitude();
             latitude = location.getLatitude();
-            locationManager.requestLocationUpdates(provider, 0, 0, this);
+            if (!providers.contains(provider)) {
+                locationManager.requestLocationUpdates(provider, 0, 0, this);
+                providers.add(provider);
+            }
             return true;
         }
         return false;
@@ -65,14 +71,17 @@ public class LocationHelper implements LocationListener {
     }
 
     public void onLocationChanged(Location arg0) {
+        updateGPSInfo();
         listener.onlocationChanged();
     }
 
     public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
+        updateGPSInfo();
         listener.onlocationChanged();
     }
 
     public void onProviderEnabled(String arg0) {
+        updateGPSInfo();
         listener.onlocationChanged();
     }
 
