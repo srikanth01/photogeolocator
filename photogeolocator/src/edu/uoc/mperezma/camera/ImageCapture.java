@@ -263,6 +263,9 @@ public class ImageCapture extends Activity implements SurfaceHolder.Callback, Ca
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if (locationHelper != null) {
+            locationHelper.disable();
+        }
         releaseAutofocusPlayer();
         releaseShotPlayer();
     }
