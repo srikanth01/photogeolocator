@@ -67,6 +67,8 @@ public class GugolMap extends MapActivity implements LocationHelperListener, and
 
         mapView.setBuiltInZoomControls(true);
 
+        updateMapMode();
+
         List<Overlay> mapOverlays = mapView.getOverlays();
         itemizedoverlay = new MyItemizedOverlay(this);
         mapOverlays.add(itemizedoverlay);
@@ -75,6 +77,18 @@ public class GugolMap extends MapActivity implements LocationHelperListener, and
         checkBox.setChecked(false);
         checkBox.setChecked(true);
 
+    }
+
+    @Override
+    protected void onResume() {
+        updateMapMode();
+        super.onResume();
+    }
+
+    private void updateMapMode() {
+        SharedPreferences settings = getSharedPreferences("map", 0);
+        boolean satellite = settings.getBoolean("satellite", true);
+        mapView.setSatellite(satellite);
     }
 
     @Override

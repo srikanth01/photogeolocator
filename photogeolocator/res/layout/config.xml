@@ -1,57 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent" >
-    <TextView
-        android:id="@+id/label"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/fileSelection"/>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
 
-    <RadioGroup
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent" >
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fileSelection"/>
 
-        <RadioButton android:id="@+id/radio_red"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="@string/gallery" />
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <RadioButton android:id="@+id/radio_blue"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="@string/explorer" />
+            <RadioButton android:id="@+id/radio_red"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/gallery" />
 
-    </RadioGroup>
+            <RadioButton android:id="@+id/radio_blue"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/explorer" />
 
-    <TextView
-        android:id="@+id/label2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/flashMode"/>
+        </RadioGroup>
 
-    <RadioGroup
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        <TextView
+            android:id="@+id/label2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/flashMode"/>
 
-        <RadioButton android:id="@+id/radio_nunca"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="@string/never" />
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <RadioButton android:id="@+id/radio_siempre"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="@string/allways" />
+            <RadioButton android:id="@+id/radio_nunca"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/never" />
 
-        <RadioButton android:id="@+id/radio_auto"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:text="@string/auto" />
+            <RadioButton android:id="@+id/radio_siempre"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/allways" />
 
-    </RadioGroup>
+            <RadioButton android:id="@+id/radio_auto"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/auto" />
 
-</LinearLayout>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/label3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mapMode"/>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton android:id="@+id/radio_map"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/map" />
+
+            <RadioButton android:id="@+id/radio_satellite"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/satellite" />
+
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>
