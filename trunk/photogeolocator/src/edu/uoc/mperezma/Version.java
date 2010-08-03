@@ -29,7 +29,7 @@ public class Version extends Activity {
         mEditor.setText("" +
                 "Photo Geolocator" +
                 "\n" +
-                getText(R.string.version) + " 1.3 (Build 201008030059)" +
+                getText(R.string.version) + " 1.4 (Build 201008032348)" +
                 "\n" +
                 "Free GNU license" +
                 "\n" +
@@ -43,6 +43,8 @@ public class Version extends Activity {
                 "Montxo - HTC Dream" +
                 "\n" +
                 "Pablo Carmona - HTC Magic" +
+                "\n" +
+                "Fritz Endres - HTC Desire" +
                 "\n" +
                 "Maria del Mar Fontana - Motorola Dext" +
                 "\n" +
