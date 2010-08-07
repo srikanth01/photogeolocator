@@ -57,8 +57,8 @@ public final class R {
         public static final int beep29=0x7f040001;
     }
     public static final class string {
-        public static final int about=0x7f060029;
-        public static final int accept=0x7f060022;
+        public static final int about=0x7f06002a;
+        public static final int accept=0x7f060023;
         public static final int accuracy=0x7f06000a;
         public static final int allways=0x7f060012;
         public static final int altitude=0x7f060007;
@@ -66,8 +66,8 @@ public final class R {
         public static final int back=0x7f060002;
         public static final int bearing=0x7f060009;
         public static final int betaTestTeam=0x7f060019;
-        public static final int cancel=0x7f060023;
-        public static final int confirmOverwrite=0x7f060020;
+        public static final int cancel=0x7f060024;
+        public static final int confirmOverwrite=0x7f060021;
         public static final int device=0x7f060003;
         public static final int eastDegrees=0x7f06000c;
         public static final int explorer=0x7f06000f;
@@ -81,14 +81,15 @@ public final class R {
         public static final int mapMode=0x7f060014;
         public static final int meters=0x7f06000b;
         public static final int never=0x7f060011;
-        public static final int noDigitalCameraImage=0x7f060024;
+        public static final int noDigitalCameraImage=0x7f060025;
         public static final int noGpsInfo=0x7f06001e;
+        public static final int npeException=0x7f06001f;
         public static final int pictureTaken=0x7f06001c;
-        public static final int preferences=0x7f060028;
-        public static final int retrievingAddress=0x7f06001f;
+        public static final int preferences=0x7f060029;
+        public static final int retrievingAddress=0x7f060020;
         public static final int satellite=0x7f060016;
-        public static final int setImageLocation=0x7f060026;
-        public static final int showImageLocation=0x7f060025;
+        public static final int setImageLocation=0x7f060027;
+        public static final int showImageLocation=0x7f060026;
         /**  Simple strings. 
  Simple strings. 
  Simple strings. 
@@ -96,15 +97,15 @@ public final class R {
          */
         public static final int skeleton_app=0x7f060000;
         public static final int speed=0x7f060008;
-        public static final int syncLocation=0x7f06002a;
-        public static final int takePicture=0x7f060027;
+        public static final int syncLocation=0x7f06002b;
+        public static final int takePicture=0x7f060028;
         public static final int takingPicture=0x7f06001b;
         public static final int thisAppUsesLibrary=0x7f06001a;
         public static final int unavailable=0x7f060004;
         public static final int update=0x7f060001;
         public static final int version=0x7f060018;
         public static final int viewThumbs=0x7f060017;
-        public static final int willOverwrite=0x7f060021;
+        public static final int willOverwrite=0x7f060022;
     }
     public static final class style {
         public static final int ActionButton=0x7f070000;
