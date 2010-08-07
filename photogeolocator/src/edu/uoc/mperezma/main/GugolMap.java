@@ -264,14 +264,18 @@ public class GugolMap extends MapActivity implements LocationHelperListener, and
                 Uri contentUri = result.getData();
                 String[] proj = {MediaStore.Images.Media.DATA};
                 Cursor cursor = managedQuery(contentUri, proj, null, null, null);
-                int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-                cursor.moveToFirst();
-                String fileName = cursor.getString(column_index);
-                if (fileName != null) {
-                    if (requestCode == 2) {
-                        showPictureLocation(fileName);
-                    } else {
-                        tagPicture(fileName);
+                if (cursor == null) {
+                    Toast.makeText(GugolMap.this, R.string.npeException, Toast.LENGTH_SHORT).show();
+                } else {
+                    int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+                    cursor.moveToFirst();
+                    String fileName = cursor.getString(column_index);
+                    if (fileName != null) {
+                        if (requestCode == 2) {
+                            showPictureLocation(fileName);
+                        } else {
+                            tagPicture(fileName);
+                        }
                     }
                 }
             }

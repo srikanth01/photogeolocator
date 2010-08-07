@@ -55,6 +55,7 @@
 
     <string name="gpsUnavailable">GPS not available</string>
     <string name="noGpsInfo">Picture doesn\'t contain geographic information</string>
+    <string name="npeException">Error: no selection. Please help us reporting this error!</string>
     <string name="retrievingAddress">Retrieving address...</string>
     <string name="confirmOverwrite">Confirm overwrite</string>
     <string name="willOverwrite">Selected image will be overwritten with current map location</string>

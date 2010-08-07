@@ -55,6 +55,7 @@
 
     <string name="gpsUnavailable">GPS no disponible</string>
     <string name="noGpsInfo">La imagen no contiene información geográfica</string>
+    <string name="npeException">Error: nada seleccionado. Ayúdanos informando de este error en www.geolocator.org</string>
     <string name="retrievingAddress">Obteniendo dirección...</string>
     <string name="confirmOverwrite">Confirmación para sobrescribir</string>
     <string name="willOverwrite">La imagen seleccionada va a ser sobrescrita con la información geográfica seleccionada</string>
