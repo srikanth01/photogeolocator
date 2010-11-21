@@ -104,7 +104,7 @@ public class ImageCapture extends Activity implements SurfaceHolder.Callback, Ca
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER && !takingPicture) {
+        if ((keyCode == KeyEvent.KEYCODE_DPAD_CENTER || keyCode == KeyEvent.KEYCODE_MENU) && !takingPicture) {
             takingPicture = true;
             Toast.makeText(ImageCapture.this, R.string.takingPicture, Toast.LENGTH_SHORT).show();
             autofocusBeep();
