@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This file contains resource definitions for displayed strings, allowing
+     them to be changed based on the locale and options. -->
+
+<resources>
+    <!-- Simple strings. -->
+    <string name="skeleton_app">Photo Geolocator</string>
+    <string name="update">Aggiorna</string>
+    <string name="back">Esci</string>
+    <string name="device">Dispositivo</string>
+    <string name="unavailable">Non disponibile</string>
+    <string name="longitude">Longitudine</string>
+    <string name="latitude">Latitudine</string>
+
+    <string name="fileSelection">Seleziona file:</string>
+    <string name="gallery">Galleria</string>
+    <string name="explorer">Esplora</string>
+    <string name="flashMode">Flash mode:</string>
+    <string name="never">Mai</string>
+    <string name="allways">Sempre</string>
+    <string name="auto">Auto</string>
+    <string name="mapMode">Modalità mappa:</string>
+    <string name="map">Mappa</string>
+    <string name="satellite">Satellinte</string>
+
+    <string name="viewThumbs">Visualizza anteprima</string>
+
+    <string name="version">Versione</string>
+    <string name="betaTestTeam">Beta-test team:</string>
+    <string name="thisAppUsesLibrary">Questa applicazione fa uso della libreria </string>
+
+    <string name="takingPicture">Prego attendere, scatto in corso...</string>
+    <string name="pictureTaken">La fotografia è stata geotaggata </string>
+
+    <string name="gpsUnavailable">GPS non disponibile</string>
+    <string name="noGpsInfo">La fotografia non contiene informazioni geografiche</string>
+    <string name="npeException">Errore: nessuna selezione. Per favore, aiutaci segnalando questo errore.</string>
+    <string name="retrievingAddress">Recupero indirizzo in corso ...</string>
+    <string name="confirmOverwrite">Conferma sovrascrittura</string>
+    <string name="willOverwrite">Le informazioni correnti dell\'immagine selezionata saranno sovrascritte</string>
+    <string name="accept">Accetta</string>
+    <string name="cancel">Cancella</string>
+    <string name="noDigitalCameraImage"> Questa fotografia non è stata scattata con una fotocamera digitale.</string>
+    <string name="showImageLocation">Mostra il luogo della fotografia</string>
+    <string name="setImageLocation">Seleziona il luogo della fotografia</string>
+    <string name="takePicture">Scatta una fotografia</string>
+    <string name="preferences">Preferenze</string>
+    <string name="about">Informazioni su ...</string>
+
+    <string name="syncLocation">Usa posizione GPS</string>
+</resources>
+
