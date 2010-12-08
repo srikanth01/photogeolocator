@@ -48,6 +48,8 @@ public class Version extends Activity {
                 "\n" +
                 "Fritz Endres - HTC Desire" +
                 "\n" +
+                "Sebastián Ercoli - Samsung Galaxy S" +
+                "\n" +
                 "Maria del Mar Fontana - Motorola Dext" +
                 "\n" +
                 "Javier Gallego - HTC Hero" +
