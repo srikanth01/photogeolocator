@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This file contains resource definitions for displayed strings, allowing
+     them to be changed based on the locale and options. -->
+
+<resources>
+    <!-- Simple strings. -->
+    <string name="skeleton_app">Photo Geolocator</string>
+    <string name="update">Actualitzar</string>
+    <string name="back">Sortir</string>
+    <string name="device">Dispositiu</string>
+    <string name="unavailable">No disponible</string>
+    <string name="longitude">Longitud</string>
+    <string name="latitude">Latitud</string>
+    <string name="altitude">Altitud</string>
+    <string name="speed">Velocitat</string>
+    <string name="bearing">Direcció</string>
+    <string name="accuracy">Precisió</string>
+    <string name="meters">metres</string>
+    <string name="eastDegrees">graus</string>
+
+    <string name="fileSelection">Selecció d\'arxiu:</string>
+    <string name="gallery">Galeria</string>
+    <string name="explorer">Explorador</string>
+    <string name="flashMode">Ús del flash:</string>
+    <string name="never">Mai</string>
+    <string name="allways">Sempre</string>
+    <string name="auto">Auto</string>
+
+    <string name="viewThumbs">Veure miniatures</string>
+
+    <string name="version">Versió</string>
+    <string name="betaTestTeam">Equip Beta-test:</string>
+    <string name="thisAppUsesLibrary">Aquesta aplicació fa servir la llibreria </string>
+
+    <string name="takingPicture">Prenent foto, espereu...</string>
+    <string name="pictureTaken">S\'ha geoetiquetat la foto</string>
+
+    <string name="gpsUnavailable">GPS no disponible</string>
+    <string name="noGpsInfo">La imatge no contè informació geogràfica</string>
+    <string name="retrievingAddress">Obtenint direcció...</string>
+    <string name="confirmOverwrite">Confirmació per a sobreescriure</string>
+    <string name="willOverwrite">La imatge seleccionada serà sobreescrita amb la informació geogràfica seleccionada</string>
+    <string name="accept">Acceptar</string>
+    <string name="cancel">Cancel·lar</string>
+    <string name="noDigitalCameraImage">La imatge no va ser presa amb una càmera digital.</string>
+    <string name="showImageLocation">Mostrar ubicació d\'una foto</string>
+    <string name="setImageLocation">Establir ubicació d\'una foto</string>
+    <string name="takePicture">Prendre foto</string>
+    <string name="preferences">Preferències</string>
+    <string name="about">Sobre...</string>
+
+    <string name="syncLocation">Fer servir el GPS</string>
+</resources>
+
