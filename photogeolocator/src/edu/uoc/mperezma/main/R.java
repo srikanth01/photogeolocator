@@ -25,8 +25,9 @@ public final class R {
         public static final int semi_black=0x7f020004;
     }
     public static final class id {
-        public static final int back=0x7f080010;
-        public static final int editor=0x7f08000f;
+        public static final int back=0x7f080011;
+        public static final int editor=0x7f080010;
+        public static final int enterLocation=0x7f08000e;
         public static final int label=0x7f080000;
         public static final int label2=0x7f080003;
         public static final int label3=0x7f080007;
@@ -40,7 +41,7 @@ public final class R {
         public static final int radio_red=0x7f080001;
         public static final int radio_satellite=0x7f080009;
         public static final int radio_siempre=0x7f080005;
-        public static final int surface=0x7f08000e;
+        public static final int surface=0x7f08000f;
         public static final int syncLocation=0x7f08000d;
     }
     public static final class layout {
@@ -91,6 +92,7 @@ public final class R {
         public static final int setImageLocation=0x7f060027;
         public static final int showImageLocation=0x7f060026;
         /**  Simple strings. 
+ Simple strings. 
  Simple strings. 
  Simple strings. 
  Simple strings. 
