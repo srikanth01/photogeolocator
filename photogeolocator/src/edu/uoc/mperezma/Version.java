@@ -29,7 +29,7 @@ public class Version extends Activity {
         mEditor.setText("" +
                 "Photo Geolocator" +
                 "\n" +
-                getText(R.string.version) + " 1.5.2 (Build 201012080203)" +
+                getText(R.string.version) + " 1.5.3 (Build 201012121406)" +
                 "\n" +
                 "Free GNU license" +
                 "\n" +
