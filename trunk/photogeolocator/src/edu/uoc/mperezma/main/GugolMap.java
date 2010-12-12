@@ -16,10 +16,18 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnKeyListener;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.maps.GeoPoint;
@@ -42,16 +50,19 @@ import org.apache.sanselan.formats.tiff.constants.TiffConstants;
  *
  * @author mperezma
  */
-public class GugolMap extends MapActivity implements LocationHelperListener, android.widget.CompoundButton.OnCheckedChangeListener {
+public class GugolMap extends MapActivity implements LocationHelperListener, OnItemClickListener, OnKeyListener, android.widget.CompoundButton.OnCheckedChangeListener {
 
     private MyItemizedOverlay itemizedoverlay;
     protected MapView mapView;
     protected CheckBox checkBox;
     protected TextView textView;
+    protected ImageButton searchButton;
     private LocationHelper locationHelper;
+    AutoCompleteTextView autoCompleteTextView;
     private double longitude;
     private double latitude;
     private boolean usarFileDialog = true;
+    private AddressLookup grl;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,7 +87,24 @@ public class GugolMap extends MapActivity implements LocationHelperListener, and
         checkBox.setOnCheckedChangeListener(this);
         checkBox.setChecked(false);
         checkBox.setChecked(true);
+        
+        autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.enterLocation);
+        autoCompleteTextView.setOnKeyListener(this);
+        autoCompleteTextView.setOnItemClickListener(this);
 
+        searchButton = (ImageButton) findViewById(R.id.button);
+        searchButton.setOnClickListener(new OnClickListener()  {
+
+            public void onClick(View v) {
+                if (autoCompleteTextView.getVisibility() == AutoCompleteTextView.VISIBLE) {
+                    hideAutoCompleteTextView();
+                } else {
+                    showAutoCompleteTextView();
+                }
+            }
+        });
+
+        hideAutoCompleteTextView();
     }
 
     @Override
@@ -117,6 +145,29 @@ public class GugolMap extends MapActivity implements LocationHelperListener, and
         }
     }
 
+    public boolean onKey(View view, int i, KeyEvent ke) {
+        if (ke.getAction() == KeyEvent.ACTION_UP) {
+            grl = new AddressLookup(this, autoCompleteTextView);
+            grl.execute();
+        }
+        return false;
+    }
+
+    public void onItemClick(AdapterView av, View view, int i, long l) {
+        final Object item = av.getItemAtPosition(i);
+        if (item instanceof AddressItem) {
+            checkBox.setChecked(false);
+            AddressItem addressItem = (AddressItem) item;
+            setLongitude(addressItem.address.getLongitude());
+            setLatitude(addressItem.address.getLatitude());
+            itemizedoverlay.setGeoPoint(longitude, latitude);
+            mapView.getController().animateTo(new GeoPoint((int)(latitude * 1E6), (int)(longitude * 1E6)));
+            mapView.getZoomButtonsController().setVisible(false);
+            mapView.invalidate();
+            hideAutoCompleteTextView();
+        }
+    }
+    
     private void showPictureLocation(final String fileName) {
         try {
             IImageMetadata metadata = Sanselan.getMetadata(new File(fileName));
@@ -288,5 +339,16 @@ public class GugolMap extends MapActivity implements LocationHelperListener, and
 
     void setLatitude(double latitude) {
         this.latitude = latitude;
+    }
+
+    private void hideAutoCompleteTextView() {
+        autoCompleteTextView.setVisibility(AutoCompleteTextView.INVISIBLE);
+        searchButton.setImageResource(R.drawable.search);
+    }
+
+    private void showAutoCompleteTextView() {
+        autoCompleteTextView.setText("");
+        autoCompleteTextView.setVisibility(AutoCompleteTextView.VISIBLE);
+        searchButton.setImageResource(R.drawable.closesearch);
     }
 }

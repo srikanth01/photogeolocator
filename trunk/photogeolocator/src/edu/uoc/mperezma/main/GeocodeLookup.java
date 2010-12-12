@@ -53,12 +53,7 @@ public class GeocodeLookup extends AsyncTask<Void, Void, String> {
             if (addresses != null && addresses.size() > 0) {
                 try {
                     Address address = addresses.get(0);
-                    for (int i = 0; i <= address.getMaxAddressLineIndex(); i++) {
-                        result += address.getAddressLine(i);
-                        if (i < address.getMaxAddressLineIndex()) {
-                            result += "\n";
-                        }
-                    }
+                    result = new AddressItem(address).toString();
                 } catch (Exception e) {
                     result = location;
                 }
