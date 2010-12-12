@@ -19,6 +19,7 @@ import android.provider.MediaStore;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.View.OnKeyListener;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -26,6 +27,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.maps.GeoPoint;
@@ -54,6 +56,7 @@ public class GugolMap extends MapActivity implements LocationHelperListener, OnI
     protected MapView mapView;
     protected CheckBox checkBox;
     protected TextView textView;
+    protected ImageButton searchButton;
     private LocationHelper locationHelper;
     AutoCompleteTextView autoCompleteTextView;
     private double longitude;
@@ -89,6 +92,19 @@ public class GugolMap extends MapActivity implements LocationHelperListener, OnI
         autoCompleteTextView.setOnKeyListener(this);
         autoCompleteTextView.setOnItemClickListener(this);
 
+        searchButton = (ImageButton) findViewById(R.id.button);
+        searchButton.setOnClickListener(new OnClickListener()  {
+
+            public void onClick(View v) {
+                if (autoCompleteTextView.getVisibility() == AutoCompleteTextView.VISIBLE) {
+                    hideAutoCompleteTextView();
+                } else {
+                    showAutoCompleteTextView();
+                }
+            }
+        });
+
+        hideAutoCompleteTextView();
     }
 
     @Override
@@ -147,8 +163,8 @@ public class GugolMap extends MapActivity implements LocationHelperListener, OnI
             itemizedoverlay.setGeoPoint(longitude, latitude);
             mapView.getController().animateTo(new GeoPoint((int)(latitude * 1E6), (int)(longitude * 1E6)));
             mapView.getZoomButtonsController().setVisible(false);
-            mapView.invalidate();            
-            autoCompleteTextView.setVisibility(AutoCompleteTextView.INVISIBLE);
+            mapView.invalidate();
+            hideAutoCompleteTextView();
         }
     }
     
@@ -323,5 +339,16 @@ public class GugolMap extends MapActivity implements LocationHelperListener, OnI
 
     void setLatitude(double latitude) {
         this.latitude = latitude;
+    }
+
+    private void hideAutoCompleteTextView() {
+        autoCompleteTextView.setVisibility(AutoCompleteTextView.INVISIBLE);
+        searchButton.setImageResource(R.drawable.search);
+    }
+
+    private void showAutoCompleteTextView() {
+        autoCompleteTextView.setText("");
+        autoCompleteTextView.setVisibility(AutoCompleteTextView.VISIBLE);
+        searchButton.setImageResource(R.drawable.closesearch);
     }
 }
