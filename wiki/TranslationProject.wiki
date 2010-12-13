@@ -2,11 +2,55 @@
 
 Photo Geolocator is currently available in five languages: English (default), Spanish, Catalan, German and Italian.
 
-||*Language*||*Status*||*Owner*||
+||*Language*|| ||*Translation*||*Contributors*||
+
+
+[Arabic]||عربي||Arabic|| ||
+Basque||Euskara
+Bengali||বাংলা
+Catalan||Català
+Catalan(Valencian)||Català(Valencià)
+Chinese(simplified)||简体中文
+Chinese(traditional)||正體中文
+Czech||čeština
+Danish||Dansk
+Dutch||Nederlands
+English(British)||English(British)
+English (US)||English (US)
+Estonian||Eesti keel
+Finnish||Suomi
+French||Français
+Galician||Galego
+German||Deutsch
+Greek||Ελληνικά
+Irish||Gaeilge
+Italian||Italiano
+Japanese||日本語
+Korean||한국어
+Kurdish||Kurdî
+Lithuanian||Lietuvių
+Macedonian||Македонски
+Mongolian||Монгол
+Norwegian(Bokmål)||Norsk(Bokmål)
+Norwegian(Nynorsk)||Norsk(Nynorsk)
+Polish||Polski
+Portuguese(Brazilian)||Português(do Brasil)
+Portuguese(European)||Português(Europeu)
+Russian||Русский
+Serbian(Cyrillic)||Cрпски(ћирилицом)
+Serbian(Latin)||Srpski(latinicom)
+Slovenian||Slovenski jezik(slovenščina)
+Spanish||Español
+Swedish||Svenska
+Turkish||Türkçe
+Vietnamese||Tiếng Việt
+
+
+
 ||German||done||Javier Gavilán Martín||
 ||Italian||done||Marcello Anselmi Tamburini||
 
-You can contribute translating it to other languages! You only have to translate these strings to your language:
+You can contribute enhancing the already finished translations or initiating the translation to any other language. You only have to translate these strings to your language:
 
 Update = 
 
