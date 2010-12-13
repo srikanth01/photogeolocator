@@ -5,7 +5,7 @@ Photo Geolocator is currently available in five languages: English (default), Sp
 ||*Language*|| ||*Translation*||*Contributors*||
 
 
-Arabic||عربي||Arabic|| ||
+Arabic||Arabic||Arabic|| ||
 Basque||Euskara
 Bengali||বাংলা
 Catalan||Català
