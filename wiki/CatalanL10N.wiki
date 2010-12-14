@@ -1,28 +1,28 @@
-Update = 
+Update = Actualitzar
 
-Exit = 
+Exit = Sortir
 
-Device = 
+Device = Dispositiu
 
-Unavailable = 
+Unavailable = No disponible
 
-Longitude = 
+Longitude = Longitud
 
-Latitude = 
+Latitude = Latitud
 
-File selection: = 
+File selection: = Selecció d'arxiu:
 
-Gallery = 
+Gallery = Galeria
 
-Explorer = 
+Explorer = Explorador
 
-Flash mode: = 
+Flash mode: = Ús del flash:
 
-Never = 
+Never = Mai
 
-Allways = 
+Allways = Sempre
 
-Auto = 
+Auto = Auto
 
 Map mode: = 
 
@@ -30,44 +30,44 @@ Map =
 
 Satellite = 
 
-View thumbnails = 
+View thumbnails = Veure miniatures
 
-Version = 
+Version = Versió
 
-Beta-test team: = 
+Beta-test team: = Equip Beta-test:
 
-This applicaton make use of the library = 
+This applicaton make use of the library = Aquesta aplicació fa servir la llibreria 
 
-Taking picture, please wait... = 
+Taking picture, please wait... = Prenent foto, espereu...
 
-Picture has been geotagged = 
+Picture has been geotagged = S'ha geoetiquetat la foto
 
-GPS not available = 
+GPS not available = GPS no disponible
 
-Picture doesn\'t contain geographic information = 
+Picture doesn\'t contain geographic information = La imatge no contè informació geogràfica
 
 Error: no selection. Please help us reporting this error! = 
 
-Retrieving address... = 
+Retrieving address... = Obtenint direcció...
 
-Confirm overwrite = 
+Confirm overwrite = Confirmació per a sobreescriure
 
-Selected image will be overwritten with current map location = 
+Selected image will be overwritten with current map location = La imatge seleccionada serà sobreescrita amb la informació geogràfica seleccionada
 
-Accept = 
+Accept = Acceptar
 
-Cancel = 
+Cancel = Cancel·lar
 
-This picture wasn\'t taken with a digital camera. = 
+This picture wasn\'t taken with a digital camera. = La imatge no va ser presa amb una càmera digital.
 
-Show picture location = 
+Show picture location = Mostrar ubicació d\'una foto
 
-Set picture location = 
+Set picture location = Establir ubicació d\'una foto
 
-Take picture = 
+Take picture = Prendre foto
 
-Preferences = 
+Preferences = Preferències
 
-About... = 
+About... = Sobre...
 
-Use GPS location = 
+Use GPS location = Fer servir el GPS
