@@ -5,15 +5,15 @@ Photo Geolocator is currently available in five languages: English (default), Sp
 ||*Language*|| ||*Status*||*Contributors*||
 ||Arabic||عربي||[ArabicL10N not started]|| ||
 ||Catalan||Català||[CatalanL10N done]||Javier Gavilán Martión||
-||Chinese||简体中文||not started|| ||
-||English||English||done||Mario Pérez Madueño||
-||French||Français||not started|| ||
-||German||Deutsch||done||Javier Gavilán Martín||
-||Italian||Italiano||done||Marcello Anselmi Tamburini||
-||Japanese||日本語||not started|| ||
-||Portuguese||Português||not started|| ||
-||Russian||Русский||not started|| ||
-||Spanish||Español||done||Mario Pérez Madueño||
+||Chinese||简体中文||[ChineseL10N not started]|| ||
+||English||English||[EnglishL10N done]||Mario Pérez Madueño||
+||French||Français||[FrenchL10N not started]|| ||
+||German||Deutsch||[GermanL10N done]||Javier Gavilán Martín||
+||Italian||Italiano||[ItalianL10N done]||Marcello Anselmi Tamburini||
+||Japanese||日本語||[JapaneseL10N not started]|| ||
+||Portuguese||Português||[PortugueseL10N not started]|| ||
+||Russian||Русский||[RussianL10N not started]|| ||
+||Spanish||Español||[SpanishL10N done]||Mario Pérez Madueño||
 
 You can contribute enhancing the already finished translations or initiating the translation to any other language. Simply log in to this wiki and edit the files.
 
