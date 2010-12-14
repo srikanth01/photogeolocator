@@ -15,6 +15,6 @@ Photo Geolocator is currently available in five languages: English (default), Sp
 ||Russian||Русский||[RussianL10N not started]|| ||
 ||Spanish||Español||[SpanishL10N done]||Mario Pérez Madueño||
 
-You can contribute enhancing the already finished translations or initiating the translation to any other language. Simply log in to this wiki and edit the files.
+You can contribute enhancing the already finished translations or initiating the translation to any other language. Simply mail to info@photogeolocator.org and I will add you to this project. Then log in to this wiki and edit the files.
 
 I've added only some languages to the list, but please feel free to add yours!
