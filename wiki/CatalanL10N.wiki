@@ -24,11 +24,11 @@ Allways = Sempre
 
 Auto = Auto
 
-Map mode: = 
+Map mode: = Model de mapa
 
-Map = 
+Map = Mapa
 
-Satellite = 
+Satellite = Satèl·lit
 
 View thumbnails = Veure miniatures
 
@@ -46,9 +46,9 @@ GPS not available = GPS no disponible
 
 Picture doesn\'t contain geographic information = La imatge no contè informació geogràfica
 
-Error: no selection. Please help us reporting this error! = 
+Error: no selection. Please help us reporting this error! = Error: no hi ha selecció. Si us plau, ajuda'ns informant d'aquesta errada!
 
-Retrieving address... = Obtenint direcció...
+Retrieving address... = Obtenint adreça...
 
 Confirm overwrite = Confirmació per a sobreescriure
 
@@ -60,9 +60,9 @@ Cancel = Cancel·lar
 
 This picture wasn\'t taken with a digital camera. = La imatge no va ser presa amb una càmera digital.
 
-Show picture location = Mostrar ubicació d\'una foto
+Show picture location = Mostrar ubicació d'una foto
 
-Set picture location = Establir ubicació d\'una foto
+Set picture location = Establir ubicació d'una foto
 
 Take picture = Prendre foto
 
