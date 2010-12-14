@@ -2,8 +2,8 @@
 
 Photo Geolocator is currently available in five languages: English (default), Spanish, Catalan, German and Italian.
 
-||*Language*|| ||*Translation*||*Contributors*||
-||Arabic||عربي||not started|| ||
+||*Language*|| ||*Status*||*Contributors*||
+||Arabic||عربي||[ArabicL10N not started]|| ||
 ||Catalan||Català||done||Javier Gavilán Martión||
 ||Chinese||简体中文||not started|| ||
 ||English||English||done||Mario Pérez Madueño||
