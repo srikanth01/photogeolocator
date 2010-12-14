@@ -1,73 +1,73 @@
-Update = 
+Update = Update
 
-Exit = 
+Exit = Exit
 
-Device = 
+Device = Device
 
-Unavailable = 
+Unavailable = Unavailable
 
-Longitude = 
+Longitude = Longitude
 
-Latitude = 
+Latitude = Latitude
 
-File selection: = 
+File selection: = File selection:
 
-Gallery = 
+Gallery = Gallery
 
-Explorer = 
+Explorer = Explorer
 
-Flash mode: = 
+Flash mode: = Flash mode:
 
-Never = 
+Never = Never
 
-Allways = 
+Allways = Allways
 
-Auto = 
+Auto = Auto
 
-Map mode: = 
+Map mode: = Map mode:
 
-Map = 
+Map = Map
 
-Satellite = 
+Satellite = Satellite
 
-View thumbnails = 
+View thumbnails = View thumbnails
 
-Version = 
+Version = Version
 
-Beta-test team: = 
+Beta-test team: = Beta-test team:
 
-This applicaton make use of the library = 
+This applicaton make use of the library = This applicaton make use of the library
 
-Taking picture, please wait... = 
+Taking picture, please wait... = Taking picture, please wait...
 
-Picture has been geotagged = 
+Picture has been geotagged = Picture has been geotagged
 
-GPS not available = 
+GPS not available = GPS not available
 
-Picture doesn\'t contain geographic information = 
+Picture doesn\'t contain geographic information = Picture doesn\'t contain geographic information
 
-Error: no selection. Please help us reporting this error! = 
+Error: no selection. Please help us reporting this error! = Error: no selection. Please help us reporting this error!
 
-Retrieving address... = 
+Retrieving address... = Retrieving address...
 
-Confirm overwrite = 
+Confirm overwrite = Confirm overwrite
 
-Selected image will be overwritten with current map location = 
+Selected image will be overwritten with current map location = Selected image will be overwritten with current map location
 
-Accept = 
+Accept = Accept
 
-Cancel = 
+Cancel = Cancel
 
-This picture wasn\'t taken with a digital camera. = 
+This picture wasn\'t taken with a digital camera. = This picture wasn\'t taken with a digital camera.
 
-Show picture location = 
+Show picture location = Show picture location
 
-Set picture location = 
+Set picture location = Set picture location
 
-Take picture = 
+Take picture = Take picture
 
-Preferences = 
+Preferences = Preferences
 
-About... = 
+About... = About...
 
-Use GPS location = 
+Use GPS location = Use GPS location
