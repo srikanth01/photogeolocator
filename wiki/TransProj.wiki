@@ -4,7 +4,7 @@ Photo Geolocator is currently available in five languages: English (default), Sp
 
 ||*Language*|| ||*Status*||*Contributors*||
 ||Arabic||عربي||[ArabicL10N not started]|| ||
-||Catalan||Català||done||Javier Gavilán Martión||
+||Catalan||Català||[CatalanL10N done]||Javier Gavilán Martión||
 ||Chinese||简体中文||not started|| ||
 ||English||English||done||Mario Pérez Madueño||
 ||French||Français||not started|| ||
