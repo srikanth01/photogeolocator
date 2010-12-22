@@ -20,7 +20,7 @@ Flash mode: = Flash mode:
 
 Never = Never
 
-Allways = Allways
+Allways = Always
 
 Auto = Auto
 
