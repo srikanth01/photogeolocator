@@ -54,7 +54,7 @@ public class GPSFileWriter {
             if (outputSet != null) {
                 TiffOutputDirectory exifDirectory = outputSet.getOrCreateRootDirectory();
                 TagInfo softwareTag = TiffConstants.EXIF_TAG_SOFTWARE;
-                String softwareString = "Photo Geolocator dev";
+                String softwareString = "PhotoGeolocator for Android";
                 TiffOutputField softwareField = new TiffOutputField(softwareTag, TiffFieldTypeConstants.FIELD_TYPE_ASCII, softwareString.length(), softwareString.getBytes());
                 exifDirectory.removeField(TiffConstants.EXIF_TAG_SOFTWARE);
                 exifDirectory.add(softwareField);
@@ -71,7 +71,7 @@ public class GPSFileWriter {
                 exifDirectory.removeField(TiffConstants.GPS_TAG_GPS_VERSION_ID);
                 exifDirectory.add(gpsversion);
                 TagInfo tlongitud = new TagInfo("GPSLongitude", 0x0004, TiffFieldTypeConstants.FIELD_TYPE_RATIONAL);
-                TiffOutputField longitud = new TiffOutputField(tlongitud, TiffFieldTypeConstants.FIELD_TYPE_RATIONAL, 3, getRationalArray((int) longitude, (int) longitudeMinutes, longitudeSeconds));
+                TiffOutputField longitud = new TiffOutputField(tlongitud, TiffFieldTypeConstants.FIELD_TYPE_RATIONAL, 3, getRationalArray((int) longitude, (int) longitudeMinutes, (int) longitudeSeconds));
                 exifDirectory.removeField(TiffConstants.GPS_TAG_GPS_LONGITUDE);
                 exifDirectory.add(longitud);
                 TagInfo tlongitudref = new TagInfo("GPSLongitudeRef", 0x0003, TiffFieldTypeConstants.FIELD_TYPE_ASCII);
@@ -79,7 +79,7 @@ public class GPSFileWriter {
                 exifDirectory.removeField(TiffConstants.GPS_TAG_GPS_LONGITUDE_REF);
                 exifDirectory.add(longitudRef);
                 TagInfo tlatitud = new TagInfo("GPSLatitude", 0x0002, TiffFieldTypeConstants.FIELD_TYPE_RATIONAL);
-                TiffOutputField latitud = new TiffOutputField(tlatitud, TiffFieldTypeConstants.FIELD_TYPE_RATIONAL, 3, getRationalArray((int) latitude, (int) latitudeMinutes, latitudeSeconds));
+                TiffOutputField latitud = new TiffOutputField(tlatitud, TiffFieldTypeConstants.FIELD_TYPE_RATIONAL, 3, getRationalArray((int) latitude, (int) latitudeMinutes, (int) latitudeSeconds));
                 exifDirectory.removeField(TiffConstants.GPS_TAG_GPS_LATITUDE);
                 exifDirectory.add(latitud);
                 TagInfo tlatitudref = new TagInfo("GPSLatitudeRef", 0x0001, TiffFieldTypeConstants.FIELD_TYPE_ASCII);
