@@ -200,7 +200,10 @@ public class ImageCapture extends Activity implements SurfaceHolder.Callback, Ca
 
     public void onAutoFocus(boolean arg0, Camera arg1) {
         try {
-            camera.takePicture(mShutterCallback, mPictureCallbackRaw, new ImageCaptureCallback(this));
+            SharedPreferences settings = getSharedPreferences("rational", 0);
+            boolean rational = settings.getBoolean("enabled", true);
+
+            camera.takePicture(mShutterCallback, mPictureCallbackRaw, new ImageCaptureCallback(this, rational));
         } catch (Exception ex) {
             ex.printStackTrace();
             Log.e(getClass().getSimpleName(), ex.getMessage(), ex);

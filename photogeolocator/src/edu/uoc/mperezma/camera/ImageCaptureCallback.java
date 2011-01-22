@@ -26,8 +26,10 @@ public class ImageCaptureCallback implements PictureCallback {
     private SimpleDateFormat timeStampFormat = new SimpleDateFormat("yyyyMMddHHmmss");
     private final ImageCapture imageCapture;
     private final String APP_FOLDER = "geolocator";
+    private boolean rational = true;
 
-    public ImageCaptureCallback(ImageCapture imageCapture) {
+    public ImageCaptureCallback(ImageCapture imageCapture, boolean rational) {
+        this.rational = rational;
         this.imageCapture = imageCapture;
     }
 
@@ -53,7 +55,7 @@ public class ImageCaptureCallback implements PictureCallback {
             longitude = longitude < 0 ? longitude * (-1) : longitude;
             latitude = latitude < 0 ? latitude * (-1) : latitude;
 
-            GPSFileWriter.update(gpxfile, longitude, longitudeRef, latitude, latitudeRef);
+            GPSFileWriter.update(gpxfile, longitude, longitudeRef, latitude, latitudeRef, rational);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

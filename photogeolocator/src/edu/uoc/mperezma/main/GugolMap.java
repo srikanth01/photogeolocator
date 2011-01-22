@@ -198,7 +198,11 @@ public class GugolMap extends MapActivity implements LocationHelperListener, OnI
                 byte latitudeRef = latitude >= 0 ? (byte) 'N' : (byte) 'S';
                 double readLongitude = longitude < 0 ? longitude * (-1) : longitude;
                 double readLatitude = latitude < 0 ? latitude * (-1) : latitude;
-                if (GPSFileWriter.update(new File(fileName), readLongitude, longitudeRef, readLatitude, latitudeRef)) {
+
+                SharedPreferences settings = getSharedPreferences("rational", 0);
+                boolean rational = settings.getBoolean("enabled", true);
+
+                if (GPSFileWriter.update(new File(fileName), readLongitude, longitudeRef, readLatitude, latitudeRef, rational)) {
                     sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://" + Environment.getExternalStorageDirectory())));
                 } else {
                     Toast.makeText(GugolMap.this, R.string.noDigitalCameraImage, Toast.LENGTH_SHORT).show();

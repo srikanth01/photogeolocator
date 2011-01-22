@@ -43,6 +43,9 @@
     <string name="mapMode">Map mode:</string>
     <string name="map">Map</string>
     <string name="satellite">Satellite</string>
+    <string name="exifRational">Decimal data:</string>
+    <string name="rationalEnabled">Enabled (better precission)</string>
+    <string name="rationalDisabled">Disabled (better compatibility)</string>
 
     <string name="viewThumbs">View thumbnails</string>
 
