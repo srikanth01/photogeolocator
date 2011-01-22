@@ -58,6 +58,8 @@ public class Version extends Activity {
                 "\n" +
                 "Manel García - HTC Tatoo" +
                 "\n" +
+                "Ken Gauger - VZW Samsung S Fascinate" +
+                "\n" +
                 "Javier Gavilán - HTC Hero" +
                 "\n" +
                 "David Godino - HTC Legend" +
