@@ -80,5 +80,29 @@
                          android:text="@string/satellite" />
 
         </RadioGroup>
+        
+        <TextView
+            android:id="@+id/label4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exifRational"/>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton android:id="@+id/radio_rationalEnabled"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/rationalEnabled" />
+
+            <RadioButton android:id="@+id/radio_rationalDisabled"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/rationalDisabled" />
+
+        </RadioGroup>        
+        
     </LinearLayout>
 </ScrollView>

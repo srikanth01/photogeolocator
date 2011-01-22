@@ -26,6 +26,8 @@ public class Config extends Activity {
     private RadioButton radio_auto;
     private RadioButton radio_map;
     private RadioButton radio_satellite;
+    private RadioButton radio_rationalEnabled;
+    private RadioButton radio_rationalDisabled;
 
     /** Called when the activity is first created. */
     @Override
@@ -41,6 +43,8 @@ public class Config extends Activity {
         radio_auto = (RadioButton) findViewById(R.id.radio_auto);
         radio_map = (RadioButton) findViewById(R.id.radio_map);
         radio_satellite = (RadioButton) findViewById(R.id.radio_satellite);
+        radio_rationalEnabled = (RadioButton) findViewById(R.id.radio_rationalEnabled);
+        radio_rationalDisabled = (RadioButton) findViewById(R.id.radio_rationalDisabled);
         radio_red.setOnClickListener(radioListener);
         radio_blue.setOnClickListener(radioListener);
         radio_siempre.setOnClickListener(radioListener);
@@ -48,6 +52,8 @@ public class Config extends Activity {
         radio_auto.setOnClickListener(radioListener);
         radio_map.setOnClickListener(radioListener);
         radio_satellite.setOnClickListener(radioListener);
+        radio_rationalEnabled.setOnClickListener(radioListener);
+        radio_rationalDisabled.setOnClickListener(radioListener);
 
         SharedPreferences settings = getSharedPreferences("fileDialog", 0);
         boolean gallery = settings.getBoolean("gallery", true);
@@ -71,6 +77,13 @@ public class Config extends Activity {
             radio_map.setChecked(true);
         } else {
             radio_satellite.setChecked(true);
+        }
+        settings = getSharedPreferences("rational", 0);
+        boolean rational = settings.getBoolean("enabled", true);
+        if (rational) {
+            radio_rationalEnabled.setChecked(true);
+        } else {
+            radio_rationalDisabled.setChecked(true);
         }
 
     }
@@ -101,6 +114,14 @@ public class Config extends Activity {
                 editor.putBoolean("satellite", false);
             } else {
                 editor.putBoolean("satellite", true);
+            }
+            editor.commit();
+            settings = getSharedPreferences("rational", 0);
+            editor = settings.edit();
+            if (radio_rationalEnabled.isChecked()) {
+                editor.putBoolean("enabled", true);
+            } else {
+                editor.putBoolean("enabled", false);
             }
             editor.commit();
         }
