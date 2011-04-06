@@ -46,6 +46,10 @@
     <string name="exifRational">Decimal data:</string>
     <string name="rationalEnabled">Enabled (better precission)</string>
     <string name="rationalDisabled">Disabled (better compatibility)</string>
+    <string name="exifMapDatum">Geodetic survey data:</string>
+    <string name="datumDisabled">Do not set</string>
+    <string name="datumWGS84">WGS-84</string>
+    <string name="datumTOKYO">TOKYO</string>
 
     <string name="viewThumbs">View thumbnails</string>
 

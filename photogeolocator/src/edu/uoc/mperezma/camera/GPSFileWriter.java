@@ -34,7 +34,7 @@ import org.apache.sanselan.formats.tiff.write.TiffOutputSet;
  */
 public class GPSFileWriter {
 
-    public static boolean update(File gpxfile, double longitude, byte longitudeRef, double latitude, byte latitudeRef, boolean rational) {    
+    public static boolean update(File gpxfile, double longitude, byte longitudeRef, double latitude, byte latitudeRef, boolean rational, String mapDatum) {    
         boolean result = true;
         try {
             TiffOutputSet outputSet = new TiffOutputSet();
@@ -70,6 +70,15 @@ public class GPSFileWriter {
                 TiffOutputField gpsversion = new TiffOutputField(tgpsversion, TiffFieldTypeConstants.FIELD_TYPE_BYTE, 4, new byte[]{2, 2, 0, 0});
                 exifDirectory.removeField(TiffConstants.GPS_TAG_GPS_VERSION_ID);
                 exifDirectory.add(gpsversion);
+
+                // add gpsmapdatum tag
+                if (mapDatum != null) {
+                    TagInfo tgpsmapdatum = new TagInfo("GPSMapDatum", 0x0012, TiffFieldTypeConstants.FIELD_TYPE_ASCII);
+                    TiffOutputField gpsmapdatum = new TiffOutputField(tgpsmapdatum, TiffFieldTypeConstants.FIELD_TYPE_ASCII, mapDatum.length() + 1, (mapDatum + "\0").getBytes("US-ASCII"));
+                    exifDirectory.removeField(TiffConstants.GPS_TAG_GPS_MAP_DATUM);
+                    exifDirectory.add(gpsmapdatum);
+                }
+                
                 TagInfo tlongitud = new TagInfo("GPSLongitude", 0x0004, TiffFieldTypeConstants.FIELD_TYPE_RATIONAL);
 
                 TiffOutputField longitud;

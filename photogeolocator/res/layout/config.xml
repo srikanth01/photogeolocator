@@ -104,5 +104,33 @@
 
         </RadioGroup>        
         
+        <TextView
+            android:id="@+id/label5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exifMapDatum"/>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton android:id="@+id/radio_datumDisabled"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/datumDisabled" />
+
+            <RadioButton android:id="@+id/radio_datumWGS84"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/datumWGS84" />
+
+            <RadioButton android:id="@+id/radio_datumTOKYO"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/datumTOKYO" />
+
+        </RadioGroup>        
+        
     </LinearLayout>
 </ScrollView>
