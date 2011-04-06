@@ -201,8 +201,9 @@ public class GugolMap extends MapActivity implements LocationHelperListener, OnI
 
                 SharedPreferences settings = getSharedPreferences("rational", 0);
                 boolean rational = settings.getBoolean("enabled", true);
-
-                if (GPSFileWriter.update(new File(fileName), readLongitude, longitudeRef, readLatitude, latitudeRef, rational)) {
+                String mapDatum = settings.getString("mapDatum", null);
+                
+                if (GPSFileWriter.update(new File(fileName), readLongitude, longitudeRef, readLatitude, latitudeRef, rational, mapDatum)) {
                     sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://" + Environment.getExternalStorageDirectory())));
                 } else {
                     Toast.makeText(GugolMap.this, R.string.noDigitalCameraImage, Toast.LENGTH_SHORT).show();

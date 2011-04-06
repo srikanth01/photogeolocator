@@ -202,8 +202,9 @@ public class ImageCapture extends Activity implements SurfaceHolder.Callback, Ca
         try {
             SharedPreferences settings = getSharedPreferences("rational", 0);
             boolean rational = settings.getBoolean("enabled", true);
+            String mapDatum = settings.getString("mapDatum", null);
 
-            camera.takePicture(mShutterCallback, mPictureCallbackRaw, new ImageCaptureCallback(this, rational));
+            camera.takePicture(mShutterCallback, mPictureCallbackRaw, new ImageCaptureCallback(this, rational, mapDatum));
         } catch (Exception ex) {
             ex.printStackTrace();
             Log.e(getClass().getSimpleName(), ex.getMessage(), ex);

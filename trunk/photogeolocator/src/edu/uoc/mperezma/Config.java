@@ -28,6 +28,9 @@ public class Config extends Activity {
     private RadioButton radio_satellite;
     private RadioButton radio_rationalEnabled;
     private RadioButton radio_rationalDisabled;
+    private RadioButton radio_datumDisabled;
+    private RadioButton radio_datumWGS84;
+    private RadioButton radio_datumTOKYO;
 
     /** Called when the activity is first created. */
     @Override
@@ -45,6 +48,10 @@ public class Config extends Activity {
         radio_satellite = (RadioButton) findViewById(R.id.radio_satellite);
         radio_rationalEnabled = (RadioButton) findViewById(R.id.radio_rationalEnabled);
         radio_rationalDisabled = (RadioButton) findViewById(R.id.radio_rationalDisabled);
+        radio_datumDisabled = (RadioButton) findViewById(R.id.radio_datumDisabled);
+        radio_datumWGS84 = (RadioButton) findViewById(R.id.radio_datumWGS84);
+        radio_datumTOKYO = (RadioButton) findViewById(R.id.radio_datumTOKYO);
+        
         radio_red.setOnClickListener(radioListener);
         radio_blue.setOnClickListener(radioListener);
         radio_siempre.setOnClickListener(radioListener);
@@ -54,6 +61,9 @@ public class Config extends Activity {
         radio_satellite.setOnClickListener(radioListener);
         radio_rationalEnabled.setOnClickListener(radioListener);
         radio_rationalDisabled.setOnClickListener(radioListener);
+        radio_datumDisabled.setOnClickListener(radioListener);
+        radio_datumWGS84.setOnClickListener(radioListener);
+        radio_datumTOKYO.setOnClickListener(radioListener);
 
         SharedPreferences settings = getSharedPreferences("fileDialog", 0);
         boolean gallery = settings.getBoolean("gallery", true);
@@ -85,7 +95,15 @@ public class Config extends Activity {
         } else {
             radio_rationalDisabled.setChecked(true);
         }
-
+        
+        String mapDatum = settings.getString("mapDatum", null);
+        if (mapDatum == null) {
+            radio_datumDisabled.setChecked(true);
+        } else if (mapDatum.equals("WGS-84")) {
+            radio_datumWGS84.setChecked(true);
+        } else {
+            radio_datumTOKYO.setChecked(true);
+        }
     }
 
     private OnClickListener radioListener = new OnClickListener() {
@@ -122,6 +140,15 @@ public class Config extends Activity {
                 editor.putBoolean("enabled", true);
             } else {
                 editor.putBoolean("enabled", false);
+            }
+            if (radio_datumDisabled.isChecked()) {
+                editor.putString("mapDatum", null);
+            }
+            if (radio_datumWGS84.isChecked()) {
+                editor.putString("mapDatum", "WGS-84");
+            }
+            if (radio_datumTOKYO.isChecked()) {
+                editor.putString("mapDatum", "TOKYO");
             }
             editor.commit();
         }
