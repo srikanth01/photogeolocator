@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This file contains resource definitions for displayed strings, allowing
+     them to be changed based on the locale and options. -->
+
+<resources>
+    <!-- Simple strings. -->
+    <string name="skeleton_app">Photo Geolocator</string>
+    <string name="update">Actualizar</string>
+    <string name="back">Salir</string>
+    <string name="device">Dispositivo</string>
+    <string name="unavailable">No disponible</string>
+    <string name="longitude">Longitud</string>
+    <string name="latitude">Latitud</string>
+    <string name="altitude">Altitud</string>
+    <string name="speed">Velocidad</string>
+    <string name="bearing">Dirección</string>
+    <string name="accuracy">Precisión</string>
+    <string name="meters">metros</string>
+    <string name="eastDegrees">grados</string>
+
+    <string name="fileSelection">Selección de archivo:</string>
+    <string name="gallery">Galería</string>
+    <string name="explorer">Explorador</string>
+    <string name="flashMode">Uso del flash:</string>
+    <string name="never">Nunca</string>
+    <string name="allways">Siempre</string>
+    <string name="auto">Auto</string>
+    <string name="mapMode">Modo de mapa:</string>
+    <string name="map">Mapa</string>
+    <string name="satellite">Satélite</string>
+    <string name="exifRational">Datos decimales:</string>
+    <string name="rationalEnabled">Habilitado (mejor precisión)</string>
+    <string name="rationalDisabled">Deshabilitado (mejor compatibilidad)</string>
+
+    <string name="viewThumbs">Ver miniaturas</string>
+
+    <string name="version">Versión</string>
+    <string name="betaTestTeam">Equipo Beta-test:</string>
+    <string name="thisAppUsesLibrary">Esta aplicación utiliza la librería </string>
+
+    <string name="takingPicture">Tomando foto, espere...</string>
+    <string name="pictureTaken">Se ha geoetiquetado la foto</string>
+
+    <string name="gpsUnavailable">GPS no disponible</string>
+    <string name="noGpsInfo">La imagen no contiene información geográfica</string>
+    <string name="npeException">Error: nada seleccionado. Ayúdanos informando de este error en www.geolocator.org</string>
+    <string name="retrievingAddress">Obteniendo dirección...</string>
+    <string name="confirmOverwrite">Confirmación para sobrescribir</string>
+    <string name="willOverwrite">La imagen seleccionada va a ser sobrescrita con la información geográfica seleccionada</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="noDigitalCameraImage">La imagen no fue tomada con una cámara digital.</string>
+    <string name="showImageLocation">Mostrar la ubicación de una foto</string>
+    <string name="setImageLocation">Establecer la ubicación de una foto</string>
+    <string name="takePicture">Tomar foto</string>
+    <string name="preferences">Preferencias</string>
+    <string name="about">Acerca de...</string>
+
+    <string name="syncLocation">Utilizar ubicación GPS</string>
+</resources>
+
