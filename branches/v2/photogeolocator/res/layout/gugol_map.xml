@@ -87,8 +87,8 @@
                                   android:orientation="horizontal"
                                   android:gravity="right">
                             <ImageButton android:id="@+id/button"
-                                 android:layout_width="48px"
-                                 android:layout_height="48px"
+                                 android:layout_width="48dp"
+                                 android:layout_height="48dp"
                                  android:gravity="center_vertical"
                                  android:src="@drawable/search" />
                         </LinearLayout>

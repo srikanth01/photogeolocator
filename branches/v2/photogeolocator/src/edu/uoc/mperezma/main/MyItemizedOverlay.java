@@ -53,7 +53,8 @@ public class MyItemizedOverlay extends Overlay {
         Point screenPts = new Point();
         mapView.getProjection().toPixels(geoPoint, screenPts);
 
-        canvas.drawBitmap(bmp, screenPts.x - MARKER_X_OFFSET, screenPts.y - MARKER_Y_OFFSET, null);
+        float scale = mapView.getResources().getDisplayMetrics().density;
+        canvas.drawBitmap(bmp, screenPts.x - (int)(MARKER_X_OFFSET * scale + 0.1f), screenPts.y - (int)(MARKER_Y_OFFSET * scale + 0.1f), null);
 
     }
 
