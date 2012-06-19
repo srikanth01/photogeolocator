@@ -52,6 +52,7 @@
     <string name="version">Versión</string>
     <string name="betaTestTeam">Equipo Beta-test:</string>
     <string name="thisAppUsesLibrary">Esta aplicación utiliza la librería </string>
+    <string name="aboutText">Esta es una aplicación libre y sin publicidad, si te gusta y te resulta últil puedes contribuir en su desarrollo de diferentes formas; reportando incidencias, sugiriendo mejoras, traduciendo a otros idiomas (actualmente castellano, catalán, inglés, almán e italiano), verificando el funcionamiento en otros dispositivos... Visita http://code.google.com/p/photogeolocator para más información, o escríbeme un e-mail a mario@oiram.com. ¡Muchas gracias a todos los que habéis ayudado!</string>
 
     <string name="takingPicture">Tomando foto, espere...</string>
     <string name="pictureTaken">Se ha geoetiquetado la foto</string>

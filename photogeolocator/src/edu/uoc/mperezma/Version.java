@@ -33,9 +33,12 @@ public class Version extends Activity {
                 "\n" +
                 "Free GNU license" +
                 "\n" +
-                "http://www.photogeolocator.org" +
+                "http://code.google.com/p/photogeolocator/" +
                 "\n" +
-                "Mail: info@photogeolocator.org" +
+                "Mail: mario@oiram.com" +
+                "\n" +
+                "\n" +
+                getText(R.string.aboutText) +
                 "\n" +
                 "\n" +
                 getText(R.string.betaTestTeam) +

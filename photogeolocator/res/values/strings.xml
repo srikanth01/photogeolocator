@@ -56,7 +56,7 @@
     <string name="version">Version</string>
     <string name="betaTestTeam">Beta-test team:</string>
     <string name="thisAppUsesLibrary">This applicaton make use of the library</string>
-
+    <string name="aboutText">This is a free (as in freedom) application and ad-free, if you like it and you find it useful you can contribute in many ways; reporting bugs, requesting enhacements, translating for other languages (currently spanish, catalan, english, germany and italian), testing the app in other devices... Please visit http://code.google.com/p/photogeolocator for more information or send me an e-mail to mario@oiram.com. ¡Thanks to all for your help!</string>
     <string name="takingPicture">Taking picture, please wait...</string>
     <string name="pictureTaken">Picture has been geotagged</string>
 
