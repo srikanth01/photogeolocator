@@ -89,7 +89,7 @@ public class Config extends Activity {
             radio_satellite.setChecked(true);
         }
         settings = getSharedPreferences("rational", 0);
-        boolean rational = settings.getBoolean("enabled", true);
+        boolean rational = settings.getBoolean("enabled", false);
         if (rational) {
             radio_rationalEnabled.setChecked(true);
         } else {
