@@ -200,7 +200,7 @@ public class GugolMap extends MapActivity implements LocationHelperListener, OnI
                 double readLatitude = latitude < 0 ? latitude * (-1) : latitude;
 
                 SharedPreferences settings = getSharedPreferences("rational", 0);
-                boolean rational = settings.getBoolean("enabled", true);
+                boolean rational = settings.getBoolean("enabled", false);
                 String mapDatum = settings.getString("mapDatum", null);
                 
                 if (GPSFileWriter.update(new File(fileName), readLongitude, longitudeRef, readLatitude, latitudeRef, rational, mapDatum)) {
