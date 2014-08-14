@@ -12,9 +12,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.location.LocationManager;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -204,7 +204,10 @@ public class GugolMap extends MapActivity implements LocationHelperListener, OnI
                 String mapDatum = settings.getString("mapDatum", null);
                 
                 if (GPSFileWriter.update(new File(fileName), readLongitude, longitudeRef, readLatitude, latitudeRef, rational, mapDatum)) {
-                    sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://" + Environment.getExternalStorageDirectory())));
+                    MediaScannerConnection.scanFile(GugolMap.this, new String[]{fileName}, null, new MediaScannerConnection.OnScanCompletedListener() {
+                        public void onScanCompleted(String path, Uri uri) {
+                        }
+                    });
                 } else {
                     Toast.makeText(GugolMap.this, R.string.noDigitalCameraImage, Toast.LENGTH_SHORT).show();
                 }
