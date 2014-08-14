@@ -29,7 +29,7 @@ public class Version extends Activity {
         mEditor.setText("" +
                 "Photo Geolocator" +
                 "\n" +
-                getText(R.string.version) + " 1.7.0 (Build 201206192331)" +
+                getText(R.string.version) + " 1.7.3 (Build 201408132118)" +
                 "\n" +
                 "Free GNU license" +
                 "\n" +
@@ -80,6 +80,8 @@ public class Version extends Activity {
                 "Marco Antonio Pérez - HTC Magic / Nexus One" +
                 "\n" +
                 "Moisés Regalon - HTC Magic" +
+                "\n" +
+                "Ed Yerke-Robins - Samsung Galaxy S4" +
                 "\n" +
                 "\n" +
                 getText(R.string.thisAppUsesLibrary) + " Sanselan Android (http://code.google.com/p/sanselanandroid)");
