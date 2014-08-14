@@ -5,11 +5,10 @@
 
 package edu.uoc.mperezma.camera;
 
-import android.content.Intent;
 import java.io.OutputStream;
-
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Environment;
 import java.io.File;
@@ -37,6 +36,8 @@ public class ImageCaptureCallback implements PictureCallback {
 
     @Override
     public void onPictureTaken(byte[] data, Camera camera) {
+        String fileName = "";
+        
         try {
             String filename = timeStampFormat.format(new Date());
 
@@ -44,6 +45,7 @@ public class ImageCaptureCallback implements PictureCallback {
             new File(root, APP_FOLDER).mkdir();
 
             File gpxfile = new File(new File(root, APP_FOLDER), filename + ".jpg");
+            fileName = gpxfile.getAbsolutePath();
             OutputStream fileOutputStream = new FileOutputStream(gpxfile);
             fileOutputStream.write(data);
             fileOutputStream.flush();
@@ -62,7 +64,11 @@ public class ImageCaptureCallback implements PictureCallback {
             ex.printStackTrace();
         }
 
-        imageCapture.sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri.parse("file://" + Environment.getExternalStorageDirectory())));
+        MediaScannerConnection.scanFile(imageCapture, new String[]{fileName}, null, new MediaScannerConnection.OnScanCompletedListener() {
+            public void onScanCompleted(String path, Uri uri) {
+            }
+        });
+        
         imageCapture.startPreview();
         imageCapture.takingPicture = false;
     }
