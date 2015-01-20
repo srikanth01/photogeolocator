@@ -34,6 +34,9 @@
     <string name="never">Mai</string>
     <string name="allways">Sempre</string>
     <string name="auto">Auto</string>
+    <string name="resolution">Bildqualität</string>
+    <string name="resolutionHigh">hochauflösende</string>
+    <string name="resolutionLow">mit niedriger Auflösung</string>
     <string name="mapMode">Modalità mappa:</string>
     <string name="map">Mappa</string>
     <string name="satellite">Satellinte</string>

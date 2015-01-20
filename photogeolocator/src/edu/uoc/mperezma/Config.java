@@ -24,6 +24,8 @@ public class Config extends Activity {
     private RadioButton radio_siempre;
     private RadioButton radio_nunca;
     private RadioButton radio_auto;
+    private RadioButton radio_resolution_low;
+    private RadioButton radio_resolution_high;
     private RadioButton radio_map;
     private RadioButton radio_satellite;
     private RadioButton radio_rationalEnabled;
@@ -44,6 +46,8 @@ public class Config extends Activity {
         radio_siempre = (RadioButton) findViewById(R.id.radio_siempre);
         radio_nunca = (RadioButton) findViewById(R.id.radio_nunca);
         radio_auto = (RadioButton) findViewById(R.id.radio_auto);
+        radio_resolution_low = (RadioButton) findViewById(R.id.radio_resolution_low);
+        radio_resolution_high = (RadioButton) findViewById(R.id.radio_resolution_high);
         radio_map = (RadioButton) findViewById(R.id.radio_map);
         radio_satellite = (RadioButton) findViewById(R.id.radio_satellite);
         radio_rationalEnabled = (RadioButton) findViewById(R.id.radio_rationalEnabled);
@@ -57,6 +61,8 @@ public class Config extends Activity {
         radio_siempre.setOnClickListener(radioListener);
         radio_nunca.setOnClickListener(radioListener);
         radio_auto.setOnClickListener(radioListener);
+        radio_resolution_low.setOnClickListener(radioListener);
+        radio_resolution_high.setOnClickListener(radioListener);
         radio_map.setOnClickListener(radioListener);
         radio_satellite.setOnClickListener(radioListener);
         radio_rationalEnabled.setOnClickListener(radioListener);
@@ -80,6 +86,13 @@ public class Config extends Activity {
             case 1: radio_siempre.setChecked(true);
             break;
             case 2: radio_auto.setChecked(true);
+        }
+        int resolution = settings.getInt("resolution", 1);
+        switch (resolution) {
+            case 0: radio_resolution_low.setChecked(true);
+            break;
+            case 1: radio_resolution_high.setChecked(true);
+            break;
         }
         settings = getSharedPreferences("map", 0);
         boolean map = !settings.getBoolean("satellite", true);
@@ -124,6 +137,14 @@ public class Config extends Activity {
                 editor.putInt("flash", 1);
             } else {
                 editor.putInt("flash", 2);
+            }
+            editor.commit();
+            settings = getSharedPreferences("camera", 0);
+            editor = settings.edit();
+            if (radio_resolution_low.isChecked()) {
+                editor.putInt("resolution", 0);
+            } else if (radio_resolution_high.isChecked()) {
+                editor.putInt("resolution", 1);
             }
             editor.commit();
             settings = getSharedPreferences("map", 0);

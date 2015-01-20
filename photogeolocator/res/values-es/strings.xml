@@ -40,6 +40,9 @@
     <string name="never">Nunca</string>
     <string name="allways">Siempre</string>
     <string name="auto">Auto</string>
+    <string name="resolution">Resolución</string>
+    <string name="resolutionHigh">Alta</string>
+    <string name="resolutionLow">Baja</string>
     <string name="mapMode">Modo de mapa:</string>
     <string name="map">Mapa</string>
     <string name="satellite">Satélite</string>
