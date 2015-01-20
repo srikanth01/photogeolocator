@@ -40,6 +40,9 @@
     <string name="never">Mai</string>
     <string name="allways">Sempre</string>
     <string name="auto">Auto</string>
+    <string name="resolution">Resolució</string>
+    <string name="resolutionHigh">Alta</string>
+    <string name="resolutionLow">Baixa</string>
     <string name="exifRational">Dades decimals:</string>
     <string name="rationalEnabled">Habilitat (millor precissió)</string>
     <string name="rationalDisabled">Deshabilitat (millor compatibilitat)</string>

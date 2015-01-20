@@ -13,6 +13,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
+import android.hardware.Camera.Size;
 import android.location.LocationManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ import android.widget.Toast;
 import edu.uoc.mperezma.location.LocationHelper;
 import edu.uoc.mperezma.location.LocationHelperListener;
 import edu.uoc.mperezma.main.R;
+import java.util.List;
 
 /**
  *
@@ -112,6 +114,7 @@ public class ImageCapture extends Activity implements SurfaceHolder.Callback, Ca
                 final Parameters parameters = camera.getParameters();
                 SharedPreferences settings = getSharedPreferences("camera", 0);
                 int flash = settings.getInt("flash", 0);
+                int resolution = settings.getInt("resolution", 1);
                 switch (flash) {
                     case 0:
                         parameters.set("flash-mode", "off");
@@ -122,6 +125,30 @@ public class ImageCapture extends Activity implements SurfaceHolder.Callback, Ca
                     case 2:
                         parameters.set("flash-mode", "auto");
                 }
+                
+                List<Size> ls = parameters.getSupportedPictureSizes();
+                
+                int resolutionIndex = 0;
+                int bestResolution = -1;
+                
+                if (resolution == 1) {
+                    for (int i = 0; i < ls.size(); i++) {
+                        if (bestResolution == -1 || ls.get(i).height > bestResolution) {
+                            resolutionIndex = i;
+                            bestResolution = ls.get(i).height;
+                        }
+                    }
+                } else {
+                    for (int i = 0; i < ls.size(); i++) {
+                        if (bestResolution == -1 || ls.get(i).height < bestResolution) {
+                            resolutionIndex = i;
+                            bestResolution = ls.get(i).height;
+                        }
+                    }
+                }
+                
+                parameters.setPictureSize(ls.get(resolutionIndex).width, ls.get(resolutionIndex).height);
+                
                 camera.setParameters(parameters);
             } catch (Exception e) {
             }
