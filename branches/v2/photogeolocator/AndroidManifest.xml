@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="edu.uoc.mperezma.main"
-          android:versionCode="21"
-          android:versionName="1.7.3">
+          android:versionCode="22"
+          android:versionName="1.7.4">
     <application android:icon="@drawable/geolocator" android:label="@string/skeleton_app">
         <activity android:name=".GugolMap" android:label="Photo Geolocator" android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
